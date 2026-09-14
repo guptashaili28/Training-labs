@@ -1,0 +1,59 @@
+Lab 2: Black Box Testing – BVA & ECP
+
+Question 1: Age between 18 and 99
+BVA Test Cases:
+17 | 98 → N-1, M-1 (Invalid)
+18 | 99 → N, M (Valid)
+19 | 100 → N+1, M+1 (Invalid)
+
+Question 2: Exam marks (60–100)
+BVA Test Cases:
+59 | 99 → Invalid
+60 | 100 → Valid
+61 | 101 → Invalid
+
+Question 3: Driver salary structure
+Equivalence Classes:
+Class 1: Age < 18 → Invalid
+Class 2: 18 ≤ Age ≤ 25 → Rs. 15000
+Class 3: 26 ≤ Age < 40 → Rs. 15000
+Class 4: 40 ≤ Age < 65 → Rs. 16500 (10% more)
+Class 5: Age ≥ 65 → Rs. 15750 (5% more)
+Class 6: Age ≥ 65 → Overlap, needs clarification
+
+Question 4: Winter Sale discounts
+Equivalence Classes:
+Age < 8 → Discount = YES
+8 ≤ Age ≤ 35 → Discount = NO
+36 ≤ Age ≤ 44 → Discount = YES
+45 ≤ Age ≤ 60 → Discount = NO
+Age > 60 → Discount = YES
+Age ≤ 0 → Invalid
+
+Question 5: Printer cartridges
+Test Cases:
+Quantity 4 → Accepted = NO, Discount = NO
+Quantity 5 → Accepted = YES, Discount = NO
+Quantity 6 → Accepted = YES, Discount = NO
+Quantity 50 → Accepted = YES, Discount = NO
+Quantity 99 → Accepted = YES, Discount = NO
+Quantity 100 → Accepted = YES, Discount = YES
+Quantity 101 → Accepted = YES, Discount = YES
+
+Question 6: Employee bonus (years of service)
+Equivalence Partitions:
+Tenure < 0 → Invalid (Not allowed)
+Tenure = 0 → No bonus
+0 < Tenure < 2 → No bonus
+2 ≤ Tenure < 5 → 10% bonus
+5 ≤ Tenure < 10 → 25% bonus
+Tenure ≥ 10 → 35% bonus
+Examples:
+1 → No bonus
+2 → No bonus
+3 → 10% bonus
+4 → 10% bonus
+5 → 25% bonus
+6 → 25% bonus
+10 → 25% bonus (boundary case, needs clarification)
+11 → 35% bonus
